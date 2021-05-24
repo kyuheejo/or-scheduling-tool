@@ -17,8 +17,8 @@ public class Main {
         // Set inputPath to the empty excel file (existing file)
         // Set outputPath to the filepath & filename you want to save the output at
         // (doesn't matter whether the file exists)
-        String inputPath = "/Users/namseunghyeon/Documents/hospital-project-excel/test_v3.xlsx";
-        String outputPath = "/Users/namseunghyeon/Documents/hospital-project-excel/test_v3_out.xlsx";
+        String inputPath = "/Users/namseunghyeon/Documents/OR_scheduling_project/hospital-project-excel/test_v3.xlsx";
+        String outputPath = "/Users/namseunghyeon/Documents/OR_scheduling_project/hospital-project-excel/test_v3_out.xlsx";
 
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Enter number of CRNAs: ");
