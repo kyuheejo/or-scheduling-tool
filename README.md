@@ -7,3 +7,5 @@
 ## What is Tabu Search? 
 
 ## How to use 
+
+README.docx contains detailed instructions to use the program to generate schedules from excel sheet. 
