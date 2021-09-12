@@ -40,3 +40,7 @@ In this problem we start by adding staffs one by one based on predefined priorit
 ## How to use 
 
 The program takes in as an input the excel file that annotates the number and area of operating rooms that need scehduling. README.docx contains detailed instructions to use the program to generate schedules from excel sheet. 
+
+## citation
+
+https://towardsdatascience.com/optimization-techniques-tabu-search-36f197ef8e25
