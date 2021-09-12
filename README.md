@@ -12,9 +12,9 @@
 
 | Methods        | What it does |
 | ------------- | ------------- |
-| IsValid | Checks if the given combination satisfies the hard constraints (e.g. maximum number of solo etc.)  |
-| IsPreferred | Checks soft constraints (e.g. preferred ratio / preferred staffs) |
-| Calculate Cost | calculates the number of attendings required for the given building based on the allowed ratio/rules |
+| **IsValid** | Checks if the given combination satisfies the hard constraints (e.g. maximum number of solo etc.)  |
+| **IsPreferred** | Checks soft constraints (e.g. preferred ratio / preferred staffs) |
+| **Calculate Cost** | calculates the number of attendings required for the given building based on the allowed ratio/rules |
 
   In order to assign the right numbers of staffings to each building given a budget of CRNAs, Residents, and Solo Attendings, I applied **Tabu Search**, a heuristic algorithm, to randomly assign numbers to each building and performing local search to search for neighbors that are superior solution. 
  
