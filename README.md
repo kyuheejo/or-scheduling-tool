@@ -31,7 +31,7 @@
 
 ## What is Tabu Search? 
 
-[!algorithm](Flowchart-of-tabu-search-algorithm.png)
+[algorithm](./Flowchart-of-tabu-search-algorithm.png)
 
 ## How to use 
 
