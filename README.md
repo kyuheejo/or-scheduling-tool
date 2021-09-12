@@ -4,7 +4,11 @@
 
 ## The Task
 
-Operating room schedules are manual devised every day according to long list of rule structures which specifies the ratio of residents:attendings, nurses:attendings in a given operating room. The required ratio varies depending on the specific buildings. Attendings are faculty member who can cover either one room without any staff or multiple rooms each with one staff (residents or nurses). The goal is to produce a optimized solution that (1) satisfies the given rules (2) minimizes the number of attendings and (3) satisfies as many preferred constraints as possible. The given information is the number of residents/nurses present on call as well as the number and location of operating rooms that needs staffing in a given day. 
+  Operating room schedules are manual devised every day according to long list of rule structures which specifies the ratio of residents : attendings, nurses : attendings in a given operating room. The required ratio varies depending on the specific buildings. Attendings are faculty member who can cover either one room without any staff or multiple rooms each with one staff (residents or nurses). The goal is to produce a optimized solution that (1) satisfies the given rules (2) minimizes the number of attendings and (3) satisfies as many preferred situation as possible. The given information is the number of residents/nurses present on call as well as the number and location of operating rooms that needs staffing in a given day. 
+
+  The problem is similar to  Nurse scheduling problem/combinatorial optimization problem, with some hard constraints, soft constraints and cost (= number of Attendings) that needs to be minimized. The goal, restated in this term, is to find out a combination that satisfies hard constraints & minimizes the number of attendings required given the total available number of residents and nurses. 
+  
+  Each building is defined as a separate class that inherits same interface (building), with the following fields: { Number of Rooms: int, Number of CRNA (nurse): int, Number of Residents: int, Number of Solo attendings: int } where rooms = CRNA + Resident + Solo. Each room needs to have one of CRNA or Resident or a Solo attending. Furthermore, the building interface has three main methods to solve the problem:  
 
 | Methods        | What it does |
 | ------------- | ------------- |
@@ -12,6 +16,8 @@ Operating room schedules are manual devised every day according to long list of 
 | IsPreferred | Checks soft constraints (e.g. preferred ratio / preferred staffs) |
 | Calculate Cost | calculates the number of attendings required for the given building based on the allowed ratio/rules |
 
+  In order to assign the right numbers of staffings to each building given a budget of CRNAs, Residents, and Solo Attendings, I applied **Tabu Search**, a heuristic algorithm, to randomly assign numbers to each building and performing local search to search for neighbors that are superior solution. 
+ 
 
 ## What is Tabu Search? 
 
