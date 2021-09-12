@@ -8,8 +8,8 @@ Operating room schedules are manual devised every day according to long list of 
 
 | Methods        | What it does |
 | ------------- | ------------- |
-| IsValid | Checks if the given combination satisfies the hard constraints (e.g. maximum number of residents/ number of solo etc.)  |
-| IsPreferred | Checks soft constraints (e.g. preferred ratio / formulation |
+| IsValid | Checks if the given combination satisfies the hard constraints (e.g. maximum number of solo etc.)  |
+| IsPreferred | Checks soft constraints (e.g. preferred ratio / preferred staffs) |
 | Calculate Cost | calculates the number of attendings required for the given building based on the allowed ratio/rules |
 
 
