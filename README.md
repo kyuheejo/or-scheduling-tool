@@ -35,7 +35,7 @@
 
 [Tabu Search](https://towardsdatascience.com/optimization-techniques-tabu-search-36f197ef8e25) is a commonly used meta-heuristic used for optimizing model parameters. A meta-heuristic is a general strategy that is used to guide and control actual heuristics. Tabu Search is often regarded as integrating memory structures into local search strategies. As local search has a lot of limitations, Tabu Search is designed to combat a lot of those issues.
 
-In this problem we start by adding staffs one by one based on predefined priorities betwen areas. If adding a staff makes the solution obsolete (i.e., violates the hard constraint) that operation is saved and maintained in Tabu List. The process is repeated until we fill in all operating rooms.  
+In this problem we start by adding staffs one by one based on predefined priorities betwen areas. If adding a staff makes the solution obsolete (i.e., violates the hard constraint) that operation is saved and maintained in Tabu List. The process is repeated until we fill in all operating rooms. The solution with least number of staffings (i.e. minimum cost) is selected.  
 
 ## How to use 
 
