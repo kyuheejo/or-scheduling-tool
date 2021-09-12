@@ -8,7 +8,7 @@
 
   The problem could be interpereted as a type of Nurse scheduling/combinatorial optimization problem, with some hard constraints, soft constraints and cost (= number of Attendings) that needs to be minimized. The goal, restated in such term, is to find out a combination that satisfies hard constraints & minimizes the number of attendings required given the total available number of residents and nurses. 
   
-  Each building is defined as a separate class that inherits same interface (building), with the following fields: { Number of Rooms: int, Number of CRNA (nurse): int, Number of Residents: int, Number of Solo attendings: int } where rooms = CRNA + Resident + Solo. Each room needs to have one of CRNA or Resident or a Solo attending. Furthermore, the building interface has three main methods to solve the problem:  
+  Each building is defined as a separate class that inherits same interface (building), with the following fields: **{ Number of Rooms: int, Number of CRNA (nurse): int, Number of Residents: int, Number of Solo attendings: int }** where rooms = CRNA + Resident + Solo. Each room needs to have one of CRNA or Resident or a Solo attending. Furthermore, the building interface has three main methods to solve the problem:  
 
 | Methods        | What it does |
 | ------------- | ------------- |
