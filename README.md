@@ -5,12 +5,15 @@
 ## The Task
 
   Operating room schedules are manually devised each day according to a long list of rule structures. There are three types of staffs and each staff type has specific rules regarding maximum coverage which apply in all areas.
+  
+  """
 
 - **Attendings (ATTG)**: Can be in one room without staff (solo attending coverage), up to two rooms with any combination including a resident (2:1 coverage), or up to three rooms if all assigned staff are nurse anesthetists (3:1 coverage).
 
 - **Residents (RES)**: Can be in only one room. Require attending in faculty column to function. One attending can cover up to two rooms if one room has a resident assigned as staff. Single coverage of resident (1:1) is permissible in certain circumstances.
 
 - **Nurse anesthetists (CRNA)**: Can be in only one room. Require attending in faculty column to function. One attending can cover up to three rooms if all rooms are CRNAs. Single coverage of nurse anesthetists (1:1) is permissible in certain circumstances.
+ """
   
   Depending on the specific building, there are combinations of staffings that are required, preferred, or forbidden. Hence, the program aims to produce an optimized solution that (1) satisfies the given rules (2) minimizes the number of attendings and (3) satisfies as many preferred situation as possible. The input information is the number of residents/nurses present on call as well as the number and location of operating rooms that needs staffing in a given day. 
 
