@@ -14,25 +14,29 @@
 - **Nurse anesthetists (CRNA)**: Can be in only one room. Require attending in faculty column to function. One attending can cover up to three rooms if all rooms are CRNAs. Single coverage of nurse anesthetists (1:1) is permissible in certain circumstances.
 ----
   
-  Depending on the specific building, there are combinations of staffings that are required, preferred, or forbidden. Hence, the program aims to produce an optimized solution that (1) satisfies the given rules (2) minimizes the number of attendings and (3) satisfies as many preferred situation as possible. The input information is the number of residents/nurses present on call as well as the number and location of operating rooms that needs staffing in a given day. 
+  Depending on the specific area, there are combinations of staffings that are required, preferred, or forbidden. Hence, the program aims to produce an optimized solution that (1) satisfies the given rules (2) minimizes the number of attendings and (3) satisfies as many preferred situation as possible. The input information is the number of residents/nurses present on call as well as the number and location of operating rooms that needs staffing in a given day. 
 
   The problem could be interpereted as a type of Nurse scheduling/combinatorial optimization problem, with some hard constraints, soft constraints and cost (= number of Attendings) that needs to be minimized. The goal, restated in such term, is to find out a combination that satisfies hard constraints & minimizes the number of attendings required given the total available number of residents and nurses. 
   
-  Each building is defined as a separate class that inherits same interface (building), with the following fields: **{ Number of Rooms: int, Number of CRNA (nurse): int, Number of Residents: int, Number of Solo attendings: int }** where rooms = CRNA + Resident + Solo. Each room needs to have one of CRNA or Resident or a Solo attending. Furthermore, the building interface has three main methods to solve the problem:  
+  Each area is defined as a separate class that inherits same interface (area), with the following fields: **{ Number of Rooms: int, Number of CRNA (nurse): int, Number of Residents: int, Number of Solo attendings: int }** where rooms = CRNA + Resident + Solo. Each room needs to have one of CRNA or Resident or a Solo attending. Furthermore, the area interface has three main methods to solve the problem:  
 
 | Methods        | What it does |
 | ------------- | ------------- |
 | **IsValid** | Checks if the given combination satisfies the hard constraints (e.g. maximum number of solo etc.)  |
 | **IsPreferred** | Checks soft constraints (e.g. preferred ratio / preferred staffs) |
-| **Calculate Cost** | calculates the number of attendings required for the given building based on the allowed ratio/rules |
+| **Calculate Cost** | calculates the number of attendings required for the given area based on the allowed ratio/rules |
 
-  In order to assign the right numbers of staffings to each building given a budget of CRNAs, Residents, and Solo Attendings, I applied **Tabu Search**, a heuristic algorithm, to randomly assign numbers to each building and performing local search to search for neighbors that are superior solution. 
+  In order to assign the right numbers of staffings to each area given a budget of CRNAs, Residents, and Solo Attendings, I applied **Tabu Search**, a heuristic algorithm, to randomly assign numbers to each area and performing local search to search for neighbors that are superior solution. 
  
 
 ## What is Tabu Search? 
 
-![algorithm](./Flowchart-of-tabu-search-algorithm.png)
+![algorithm](./Flowchart-of-Tabu-Search-Algorithm.png)
+
+[Tabu Search](https://towardsdatascience.com/optimization-techniques-tabu-search-36f197ef8e25) is a commonly used meta-heuristic used for optimizing model parameters. A meta-heuristic is a general strategy that is used to guide and control actual heuristics. Tabu Search is often regarded as integrating memory structures into local search strategies. As local search has a lot of limitations, Tabu Search is designed to combat a lot of those issues.
+
+In this problem we start by adding staffs one by one based on predefined priorities betwen areas. If adding a staff makes the solution obsolete (i.e., violates the hard constraint) that operation is saved and maintained in Tabu List. The process is repeated until we fill in all operating rooms.  
 
 ## How to use 
 
-README.docx contains detailed instructions to use the program to generate schedules from excel sheet. 
+The program takes in as a input excel file that annotates the number and area of operating rooms that need scehduling. README.docx contains detailed instructions to use the program to generate schedules from excel sheet. 
