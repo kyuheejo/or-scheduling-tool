@@ -39,7 +39,7 @@ In this problem we start by adding staffs one by one based on predefined priorit
 
 ## How to use 
 
-The program takes in as an input the excel file that annotates the number and area of operating rooms that need scehduling. README.docx contains detailed instructions to use the program to generate schedules from excel sheet. 
+I created a Spring Boot Application that takes in as an input an excel file that annotates the number and area of operating rooms that need scehduling and the number of staffs (nurses, residents) available on a given day. 
 
 ## Citation
 
