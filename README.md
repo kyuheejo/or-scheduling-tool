@@ -31,7 +31,7 @@
 
 ## What is Tabu Search? 
 
-![algorithm](./Flowchart-of-Tabu-Search-Algorithm.png)
+![algorithm](./orscheduling.png)
 
 [Tabu Search](https://towardsdatascience.com/optimization-techniques-tabu-search-36f197ef8e25) is a commonly used meta-heuristic used for optimizing model parameters. A meta-heuristic is a general strategy that is used to guide and control actual heuristics. Tabu Search is often regarded as integrating memory structures into local search strategies. As local search has a lot of limitations, Tabu Search is designed to combat a lot of those issues.
 
